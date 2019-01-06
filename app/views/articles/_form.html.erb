@@ -1,0 +1,27 @@
+<%= render 'shared/errors', object: @article %>
+
+<%= form_for @article do |f| %>
+
+<div class="eight columns offset-by-two">
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "u-full-width" %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 10, class: "u-full-width" %>
+  </p>
+
+  <p>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+      <% cb.label() {cb.check_box() + cb.text} %>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.submit class: "button button-primary" %>
+  </p>
+</div>
+
+<% end %>

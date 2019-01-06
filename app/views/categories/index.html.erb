@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="section-actions">
+    <h2 class="section-title">All categories</h2>
+
+    <% if logged_in? and current_user.admin? %>
+      <%= link_to 'New category', new_category_path, class: "button" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row categories-list">
+  <div class="eight columns offset-by-two">
+
+    <div class="row">
+      <%= will_paginate %>
+    </div>
+
+    <div class="category-data">
+      <ul class="category-data__list">
+        <% @categories.each do |category| %>
+
+          <%= link_to(category_path(category)) do %>
+            <li class="pill">
+              <span class="category-data__name"><%= category.name %></span>
+              <span class="category-data__articles-count"><%= pluralize(category.articles.count, "article") if category.articles %></span>
+            </li>
+          <% end %> 
+
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="row">
+      <%= will_paginate %>
+    </div>
+
+  </div>
+</div>

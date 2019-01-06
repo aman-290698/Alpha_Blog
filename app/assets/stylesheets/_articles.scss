@@ -1,0 +1,39 @@
+.articles-list {
+  
+  .article__title {
+    margin-bottom: .5rem;
+    font-size: 2rem;
+  }
+
+  .article__body {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+
+}
+
+
+
+.article {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  border-radius: $global-radius;
+  background-color: #fff;
+
+  box-shadow: .1rem .1rem .2rem lighten($dark-grey, .5);
+}
+
+.article__meta {
+  padding: 1rem 0;
+  font-size: 80%;
+  border-top: solid .1rem $border-color;
+  border-bottom: solid .1rem $border-color;
+
+  text-align: center;
+}
+
+.article__body {
+  margin-top: 5rem;
+}

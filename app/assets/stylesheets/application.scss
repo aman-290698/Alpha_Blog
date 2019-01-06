@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+/*------------------------------------*\
+  #IMPORTS
+\*------------------------------------*/
+
+@import
+  'variables',
+  'skeleton-scss/skeleton',
+
+  'links',
+  'buttons',
+  'messages',
+  'pagination',
+
+  'navigation/navigation',
+  'navigation/section-actions',
+
+  'footer',
+
+  'users',
+  'articles',
+  'categories'
+  ;
+
+
+
+
+
+/*------------------------------------*\
+  #GENERAL STYLES
+\*------------------------------------*/
+
+html {
+  background-color: $light-grey;
+}
+
+table {
+  width: 100%;
+}
+
+textarea {
+  height: auto;
+  min-height: auto;
+}
+
+
+
+.main {
+  padding-top: 3rem;
+}
+
+
+
+.cta {
+  margin: 3rem 0;
+  padding: 5rem 2rem;
+  border-radius: $global-radius;
+
+  text-align: center;
+  color: #fff;
+  background-color: $secondary-color;
+}
+
+
+
+.img-circle {
+  border-radius: 100%;
+}
+
+.pill {
+  margin-right: .5rem;
+  padding: .5rem;
+  border-radius: 1.5rem;
+  background-color: $light-grey;
+  color: $secondary-color;
+  text-transform: lowercase;
+}
